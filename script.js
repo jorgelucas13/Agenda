@@ -330,7 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
       {
         nome: "6-ANO-M.docx",
         camposUsados: ["campoV", "campoX", "campoAI", "campoAJ",
-          "campoAK", "campoAL", "campoBK", "campoBL", "campoCM", "campoCN", "campoCO", "campoCP", "campoCU", "campoCV", "campoCW", "campoCX", "campoEG", "campoEH", "campoFG", "campoGH"
+          "campoAK", "campoAL", "campoBK", "campoBL", "campoCM", "campoCN", "campoCO", "campoCP", "campoCU", "campoCV", "campoCW", "campoCX", "campoEG", "campoEH", "campoFG", "campoFH", "campoGH"
           , "campoGA", "campoGB", "campoGC", "campoGD", "campoGG", "campoGH", "campoGS", "campoGT", "campoGU", "campoGV", "campoRL1", "campoRL2", "campoRL3", "campoRL4", "campoRL5", "campoData1", "campoData2"
         ],
       },
@@ -338,21 +338,21 @@ document.addEventListener('DOMContentLoaded', () => {
         nome: "7-ANO-M.docx",
         camposUsados: ["campoC", "campoD", "campoY", "campoZ",
           "campoAM", "campoAN", "campoAO", "campoAP", "campoCQ", "campoCR", "campoCS", "campoCT", "campoCY", "campoCZ", "campoDA", "campoDB", "campoDC", "campoDD", "campoEI", "campoEJ"
-          , "campoFI", "campoFJ", "campoGE", "campoGF", "campoGI", "campoGJ", "campoGW", "campoGX", "campoGY", "campoGZ", "campoData1", "campoData2"
+          , "campoFI", "campoFJ", "campoGE", "campoGF", "campoGI", "campoGJ", "campoGW", "campoGX", "campoGY", "campoGZ", "campoIA", "campoIB", "campoData1", "campoData2"
         ],
       },
       {
         nome: "8-ANO-M.docx",
         camposUsados: ["campoG", "campoH", "campoAA", "campoAB",
           "campoDE", "campoDF", "campoDG", "campoDH", "campoEK", "campoEL", "campoFS", "campoFT", "campoFU", "campoFV", "campoGK", "campoGL", "campoGM", "campoGN", "campoHA", "campoHB", "campoHC", "campoHD"
-          , "campoIG", "campoIH", "campoII", "campoIJ", "campoIQ", "campoIR", "campoData1", "campoData2"
+          , "campoIG", "campoIH", "campoII", "campoIJ", "campoIQ", "campoIR",, "campoIC", "campoID", "campoData1", "campoData2"
         ],
       },
       {
         nome: "9-ANO-M.docx",
         camposUsados: ["campoAC", "campoAD", "campoK", "campoL",
           "campoBI", "campoBJ", "campoDI", "campoDJ", "campoDK", "campoDL", "campoEM", "campoEN", "campoFW", "campoFX", "campoFY", "campoFZ", "campoGO", "campoGP", "campoGQ", "campoGR"
-          , "campoHE", "campoHF", "campoHG", "campoHH", "campoIK", "campoIL", "campoIM", "campoIN", "campoIO", "campoIP", "campoIS", "campoIT", "campoData1", "campoData2"
+          , "campoHE", "campoHF", "campoHG", "campoHH", "campoIE", "campoIF", "campoIK", "campoIL", "campoIM", "campoIN", "campoIO", "campoIP", "campoIS", "campoIT", "campoData1", "campoData2"
         ],
       },
       {
@@ -368,7 +368,7 @@ document.addEventListener('DOMContentLoaded', () => {
         camposUsados: [, "campoC", "campoD", "campoM", "campoN", "campoP", "campoQ",
            "campoT", "campoT1",  "campoT2", "campoU", "campoBC", "campoBD", "campoBE", "campoBF", "campoBG", "campoBH", "campoBM", "campoBN", "campoBY", "campoBZ", "campoCA", "campoCB"
            , "campoDQ", "campoDR", "campoDS", "campoDT", "campoEI", "campoEJ", "campoEO", "campoEP", "campoEQ", "campoER", "campoES", "campoET", "campoFI", "campoFJ", "campoHQ", "campoHR", "campoHY", "campoHZ"
-           , "campoIA", "campoIB", "campoData1", "campoData2"
+           , "campoData1", "campoData2"
         ],
       },
       {
@@ -376,14 +376,14 @@ document.addEventListener('DOMContentLoaded', () => {
         camposUsados: ["campoE", "campoF", "campoG", "campoH",
           "campoAE", "campoAF", "campoAQ", "campoAR", "campoAS", "campoAT", "campoBO", "campoBP", "campoBQ", "campoBR", "campoCE", "campoCF", "campoCG", "campoCH"
           , "campoDU", "campoDV", "campoDW", "campoDX", "campoDY", "campoDZ", "campoEK", "campoEL", "campoEU", "campoEV", "campoEW", "campoEX", "campoEY", "campoEZ", "campoFK", "campoFL"
-          , "campoFM", "campoFN", "campoHS", "campoHT", "campoIC", "campoID", "campoData1", "campoData2"
+          , "campoFM", "campoFN", "campoHS", "campoHT", "campoData1", "campoData2"
         ],
       },
       {
         nome: "9-ANO-T.docx",
         camposUsados: ["campoI", "campoJ", "campoK", "campoL",
         "campoAG", "campoAH", "campoAU", "campoAV", "campoBI", "campoBJ", "campoBS", "campoBT", "campoCI", "campoCJ", "campoCK", "campoCL", "campoEA", "campoEB",
-        "campoEE", "campoEF", "campoEM", "campoFA", "campoFB", "campoFC", "campoFD", "campoFE", "campoFF", "campoFO", "campoFP", "campoFQ", "campoFR", "campoHU", "campoHV", "campoIE", "campoIF"
+        "campoEE", "campoEF", "campoEM", "campoFA", "campoFB", "campoFC", "campoFD", "campoFE", "campoFF", "campoFO", "campoFP", "campoFQ", "campoFR", "campoHU", "campoHV"
         , "campoIO", "campoIP", "campoData1", "campoData2"]
       },
       // Adicione mais aqui conforme necessário
