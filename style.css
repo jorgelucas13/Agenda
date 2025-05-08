@@ -1,0 +1,228 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 0;
+    font-family: "Roboto Condensed", sans-serif;
+}
+body{
+    background-color: #dee0e2;
+    width: 100%;
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #969696;
+    padding: 10px;
+}
+header button#gerar-doc {
+  padding: 10px 20px;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+header button#gerar-doc:hover {
+  background-color: #27ae60;
+}
+.left-menu{
+  display: flex;
+  gap: 15px;
+}
+.limpador{
+  background-color: #1961cc;
+  color: #fff;
+  font-weight: bold;
+  border: 2px solid #242424;
+  border-radius: 10px;
+  padding: 8px;
+}
+.limpador:hover{
+  background-color: #113e81;
+}
+.right-menu{
+  display: flex;
+  gap: 20px;
+}
+.logo{
+  width: 40px;
+  height: 40px;
+}
+.pesquisa{
+  width: 37px;
+  height: 37px;
+}
+.menu-icon{
+  width: 40px;
+  height: 40px;
+}
+/* INICIO DA DATA */
+.date-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  min-height: 30%;
+}
+.date-container {
+  gap: 10px;
+  padding: 20px;
+  border-radius: 1rem;
+  background: #ffffffcc;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  max-width: 430px;
+  height: auto;
+}
+.date-container h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+.calendar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  max-width: auto;
+}
+.date-input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.date-input:focus {
+  border-color: #1961cc;
+  box-shadow: 0 0 0 3px #5c9ded44;
+  outline: none;
+}
+
+/* INICIO DOS CARDS */
+
+.card-grid{
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+}
+.cabecalho{
+  display: flex;
+  justify-content: space-between;
+}
+.card {
+  position: relative;
+  margin-bottom: 30px;
+  background: white;
+  border-radius: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  width: 23%;
+  max-width: 600px;
+  display: inline-block;
+  vertical-align: top;
+}
+.card-checkbox {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+.card h2 {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.card h3 {
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.ano-bloco {
+  border: 2px solid black;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.ano-bloco h4 {
+  font-size: 1.4rem;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.dia {
+  margin-bottom: 1rem;
+}
+
+.dia h5 {
+  margin: 0 0 0.5rem;
+  font-weight: normal;
+  font-size: 1rem;
+  border-bottom: 2px solid black;
+  display: inline-block;
+}
+
+.box {
+  border: 2px solid #1961cc;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background: white;
+  margin-bottom: 1rem;
+}
+
+.titulo {
+  background: #1961cc;
+  color: white;
+  text-align: center;
+  padding: 0.4rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  border-radius: 0.3rem;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.4rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 700px) {
+  .date-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .calendar{
+    display: flex;
+    flex-direction: column;
+  }
+  .date-input {
+    flex: 1;
+    margin: 5px 0;
+  }
+  .card {
+    width: 30%;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .card {
+    width: 90%;
+    padding: 1rem;
+  }
+}
+

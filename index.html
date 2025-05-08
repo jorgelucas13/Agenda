@@ -1,0 +1,1956 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/pizzip@3.1.5/dist/pizzip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/docxtemplater/3.22.2/docxtemplater.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+  </head>
+
+<header>
+    <div class="left-menu">
+    <div class="logo"><svg fill="#000000" viewBox="0 0 24 24" id="agenda-book" data-name="Flat Line" xmlns="http://www.w3.org/2000/svg" class="icon flat-line"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path id="secondary" d="M18,3H4A1,1,0,0,0,3,4V20a1,1,0,0,0,1,1H18a1,1,0,0,0,1-1V4A1,1,0,0,0,18,3Zm-3,8H7V7h8Z" style="fill: #1961cc; stroke-width: 2;"></path><path id="primary" d="M21,9H19V7h2Zm0,4H19v2h2ZM15,7H7v4h8Zm4,13V4a1,1,0,0,0-1-1H4A1,1,0,0,0,3,4V20a1,1,0,0,0,1,1H18A1,1,0,0,0,19,20Z" style="fill: none; stroke: #242424; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path></g></svg></div>
+    <button id="limparCampos" class="limpador">Limpar Tudo</button> </div>
+    <div class="right-menu">
+      <button id="gerar-doc">Gerar e Baixar</button>
+    <div class="pesquisa"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M11 6C13.7614 6 16 8.23858 16 11M16.6588 16.6549L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="#242424" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></div>
+    <div class="menu-icon">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M4 6H20M4 12H20M4 18H20" stroke="#242424" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></div>
+    </div>
+</header>
+
+<body>
+
+    <section class="date-section">
+        <div class="date-container">
+            <div>
+        <h2>Escolha a semana:</h2></div>
+        <div class="calendar">
+          <input id="campo-data-1" type="date" class="date-input" />
+          <p>até</p>
+          <input id="campo-data-2" type="date" class="date-input" />
+        </div>
+        </div>
+      </section>
+
+      <section class="card-grid">
+        <!-- Professor A -->
+        <div class="card">
+            <div class="cabecalho">
+            <h2>Adriana Guerra</h2>
+            <input type="checkbox" class="card-checkbox" id="check-6ano" /></div>
+            <h3>Leitura</h3>
+          
+            <!-- Início do bloco por ano -->
+            <div class="ano-bloco">
+              <h4>6º ano TARDE</h4>
+          
+              <div class="dia">
+                <h5>Sexta-Feira</h5>
+                <div class="box">
+                  <div class="titulo">Conteúdo</div>
+                  <input id="campo-A" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                  <div class="titulo">Atividade para casa</div>
+                  <input id="campo-B" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                </div>
+              </div>
+          
+            <!-- Outro bloco de ano -->
+            <div class="ano-bloco">
+              <h4>7º ano</h4>
+          
+              <div class="dia">
+                <h5>Quinta-Feira</h5>
+                <div class="box">
+                  <div class="titulo">Conteúdo</div>
+                  <input id="campo-C" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                  <div class="titulo">Atividade para casa</div>
+                  <input id="campo-D" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                </div>
+              </div>
+            </div>
+              <div class="ano-bloco">
+                <h4>8º ano</h4>
+            
+                <div class="dia">
+                  <h5>Quinta-Feira</h5>
+                  <div class="box">
+                    <div class="titulo">Conteúdo</div>
+                    <input id="campo-E" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                    <div class="titulo">Atividade para casa</div>
+                    <input id="campo-F" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                  </div>
+                </div>
+                <div class="dia">
+                  <h5>Sexta-Feira</h5>
+                  <div class="box">
+                    <div class="titulo">Conteúdo</div>
+                    <input id="campo-G" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                    <div class="titulo">Atividade para casa</div>
+                    <input id="campo-H" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                  </div>
+                </div>
+            </div>
+            <div class="ano-bloco">
+              <h4>9º ano</h4>
+          
+              <div class="dia">
+                <h5>Quinta-Feira</h5>
+                <div class="box">
+                  <div class="titulo">Conteúdo</div>
+                  <input id="campo-I" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                  <div class="titulo">Atividade para casa</div>
+                  <input id="campo-J" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                </div>
+              </div>
+              <div class="dia">
+                <h5>Sexta-Feira</h5>
+                <div class="box">
+                  <div class="titulo">Conteúdo</div>
+                  <input id="campo-K" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                  <div class="titulo">Atividade para casa</div>
+                  <input id="campo-L" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                </div>
+              </div>
+          </div>
+          <h3>Redação</h3>
+          <div class="ano-bloco">
+            <h4>7º ano TARDE</h4>
+        
+            <div class="dia">
+              <h5>Quinta-Feira</h5>
+              <div class="box">
+                <div class="titulo">Conteúdo</div>
+                <input id="campo-M" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                <div class="titulo">Atividade para casa</div>
+                <input id="campo-N" class="card-textarea" type="text" placeholder="Digite a atividade:">
+              </div>
+            </div>
+            <div class="dia">
+              <h5>Sexta-Feira</h5>
+              <div class="box">
+                <div class="titulo">Conteúdo</div>
+                <input id="campo-P" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                <div class="titulo">Atividade para casa</div>
+                <input id="campo-Q" class="card-textarea" type="text" placeholder="Digite a atividade:">
+              </div>
+            </div>
+        </div>
+          </div>
+        </div>
+
+          <!-- Professor B -->
+          <div class="card">
+            <div class="cabecalho">
+            <h2>Amara</h2>
+            <input type="checkbox" class="card-checkbox" id="check-6ano" /></div>
+            <h3>História</h3>
+          
+            <!-- Início do bloco por ano -->
+            <div class="ano-bloco">
+              <h4>6º ano TARDE</h4>
+          
+              <div class="dia">
+                <h5>Quinta-Feira</h5>
+                <div class="box">
+                  <div class="titulo">Conteúdo</div>
+                  <input id="campo-R" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                  <div class="titulo">Atividade para casa</div>
+                  <input id="campo-S" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                </div>
+              </div>
+          
+              <div class="dia">
+                <h5>Sexta-Feira</h5>
+                <div class="box">
+                  <div class="titulo">Conteúdo</div>
+                  <input id="campo-R1" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                  <div class="titulo">Atividade para casa</div>
+                  <input id="campo-R2" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                </div>
+              </div>
+            </div>
+          
+            <!-- Outro bloco de ano -->
+            <div class="ano-bloco">
+              <h4>7º ano TARDE</h4>
+          
+              <div class="dia">
+                <h5>Terça-Feira</h5>
+                <div class="box">
+                  <div class="titulo">Conteúdo</div>
+                  <input id="campo-T" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                  <div class="titulo">Atividade para casa</div>
+                  <input id="campo-T1" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                </div>
+              </div>
+          
+              <div class="dia">
+                <h5>Sexta-Feira</h5>
+                <div class="box">
+                  <div class="titulo">Conteúdo</div>
+                  <input id="campo-T2" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                  <div class="titulo">Atividade para casa</div>
+                  <input id="campo-U" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- Professor C -->
+        <div class="card">
+          <div class="cabecalho">
+          <h2>Amorim</h2>
+          <input type="checkbox" class="card-checkbox" id="check-6ano" /></div>
+          <h3>Geometria</h3>
+        
+          <!-- Início do bloco por ano -->
+          <div class="ano-bloco">
+            <h4>6º ano</h4>
+        
+            <div class="dia">
+              <h5>Segunda-Feira</h5>
+              <div class="box">
+                <div class="titulo">Conteúdo</div>
+                <input id="campo-V" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                <div class="titulo">Atividade para casa</div>
+                <input id="campo-X" class="card-textarea" type="text" placeholder="Digite a atividade:">
+              </div>
+            </div>
+        
+          <div class="ano-bloco">
+            <h4>7º ano</h4>
+        
+            <div class="dia">
+              <h5>Segunda-Feira</h5>
+              <div class="box">
+                <div class="titulo">Conteúdo</div>
+                <input id="campo-Y" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                <div class="titulo">Atividade para casa</div>
+                <input id="campo-Z" class="card-textarea" type="text" placeholder="Digite a atividade:">
+              </div>
+            </div>
+          </div>
+
+          <div class="ano-bloco">
+            <h4>8º ano</h4>
+        
+            <div class="dia">
+              <h5>Segunda-Feira</h5>
+              <div class="box">
+                <div class="titulo">Conteúdo</div>
+                <input id="campo-AA" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                <div class="titulo">Atividade para casa</div>
+                <input id="campo-AB" class="card-textarea" type="text" placeholder="Digite a atividade:">
+              </div>
+            </div>
+          </div>
+
+          <div class="ano-bloco">
+            <h4>9º ano</h4>
+        
+            <div class="dia">
+              <h5>Segunda-Feira</h5>
+              <div class="box">
+                <div class="titulo">Conteúdo</div>
+                <input id="campo-AC" class="card-textarea" type="text" type="text" placeholder="Digite o conteúdo:">
+                <div class="titulo">Atividade para casa</div>
+                <input id="campo-AD" class="card-textarea" type="text" type="text" placeholder="Digite a atividade:">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+                  <!-- Professor D -->
+                  <div class="card">
+                    <div class="cabecalho">
+                    <h2>Andréia</h2>
+                    <input type="checkbox" class="card-checkbox" id="check-6ano" /></div>
+                    <h3>Gramática</h3>
+                  
+                    <!-- Início do bloco por ano -->
+                    <div class="ano-bloco">
+                      <h4>8º ano TARDE</h4>
+                  
+                      <div class="dia">
+                        <h5>Quarta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-AE" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-AF" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <!-- Outro bloco de ano -->
+                    <div class="ano-bloco">
+                      <h4>9º ano TARDE</h4>
+                  
+                      <div class="dia">
+                        <h5>Quarta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-AG" class="card-textarea" type="text" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-AH" class="card-textarea" type="text" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Professor E -->
+                  <div class="card">
+                    <div class="cabecalho">
+                    <h2>Ana Clara</h2>
+                    <input type="checkbox" class="card-checkbox" id="check-6ano" /></div>
+                    <h3>Ciências</h3>
+                  
+                    <!-- Início do bloco por ano -->
+                    <div class="ano-bloco">
+                      <h4>6º ano</h4>
+                  
+                      <div class="dia">
+                        <h5>Terça-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-AI" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-AJ" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                  
+                      <div class="dia">
+                        <h5>Sexta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-AK" class="card-textarea" type="text" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-AL" class="card-textarea" type="text" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <!-- Outro bloco de ano -->
+                    <div class="ano-bloco">
+                      <h4>7º ano</h4>
+                  
+                      <div class="dia">
+                        <h5>Terça-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-AM" class="card-textarea" type="text" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-AN" class="card-textarea" type="text" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                  
+                      <div class="dia">
+                        <h5>Sexta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-AO" class="card-textarea" type="text" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-AP" class="card-textarea" type="text" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="ano-bloco">
+                      <h4>8º ano TARDE</h4>
+                  
+                      <div class="dia">
+                        <h5>Segunda-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-AQ" class="card-textarea" type="text" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-AR" class="card-textarea" type="text" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                  
+                      <div class="dia">
+                        <h5>Terça-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-AS" class="card-textarea" type="text" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-AT" class="card-textarea" type="text" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="ano-bloco">
+                      <h4>9º ano TARDE</h4>
+                  
+                      <div class="dia">
+                        <h5>Segunda-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-AU" class="card-textarea" type="text" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-AV" class="card-textarea" type="text" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+        <!-- Professor F -->
+        <div class="card">
+          <div class="cabecalho">
+          <h2>Cássio</h2>
+          <input type="checkbox" class="card-checkbox" id="check-6ano" /></div>
+          <h3>Ciências</h3>
+        
+          <!-- Início do bloco por ano -->
+          <div class="ano-bloco">
+            <h4>6º ano TARDE</h4>
+        
+            <div class="dia">
+              <h5>Segunda-Feira</h5>
+              <div class="box">
+                <div class="titulo">Conteúdo</div>
+                <input id="campo-AW" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                <div class="titulo">Atividade para casa</div>
+                <input id="campo-AX" class="card-textarea" type="text" placeholder="Digite a atividade:">
+              </div>
+            </div>
+        
+            <div class="dia">
+              <h5>Quarta-Feira</h5>
+              <div class="box">
+                <div class="titulo">Conteúdo</div>
+                <input id="campo-AY" class="card-textarea" type="text" type="text" placeholder="Digite o conteúdo:">
+                <div class="titulo">Atividade para casa</div>
+                <input id="campo-AZ" class="card-textarea" type="text" type="text" placeholder="Digite a atividade:">
+              </div>
+            </div>
+
+            <div class="dia">
+              <h5>Quinta-Feira</h5>
+              <div class="box">
+                <div class="titulo">Conteúdo</div>
+                <input id="campo-BA" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                <div class="titulo">Atividade para casa</div>
+                <input id="campo-BB" class="card-textarea" type="text" type="text" placeholder="Digite a atividade:">
+              </div>
+            </div>
+          </div>
+        
+          <!-- Outro bloco de ano -->
+          <div class="ano-bloco">
+            <h4>7º ano TARDE</h4>
+        
+            <div class="dia">
+              <h5>Segunda-Feira</h5>
+              <div class="box">
+                <div class="titulo">Conteúdo</div>
+                <input id="campo-BC" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                <div class="titulo">Atividade para casa</div>
+                <input id="campo-BD" class="card-textarea" type="text" placeholder="Digite a atividade:">
+              </div>
+            </div>
+        
+            <div class="dia">
+              <h5>Terça-Feira</h5>
+              <div class="box">
+                <div class="titulo">Conteúdo</div>
+                <input id="campo-BE" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                <div class="titulo">Atividade para casa</div>
+                <input id="campo-BF" class="card-textarea" type="text" placeholder="Digite a atividade:">
+              </div>
+            </div>
+
+            <div class="dia">
+              <h5>Quarta-Feira</h5>
+              <div class="box">
+                <div class="titulo">Conteúdo</div>
+                <input id="campo-BG" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                <div class="titulo">Atividade para casa</div>
+                <input id="campo-BH" class="card-textarea" type="text" placeholder="Digite a atividade:">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Professor G -->
+        <div class="card">
+          <div class="cabecalho">
+          <h2>Danilo</h2>
+          <input type="checkbox" class="card-checkbox" id="check-6ano" /></div>
+          <h3>Química</h3>
+        
+          <!-- Início do bloco por ano -->
+          <div class="ano-bloco">
+            <h4>9º ano</h4>
+        
+            <div class="dia">
+              <h5>Quinta/Sexta-Feira</h5>
+              <div class="box">
+                <div class="titulo">Conteúdo</div>
+                <input id="campo-BI" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                <div class="titulo">Atividade para casa</div>
+                <input id="campo-BJ" class="card-textarea" type="text" placeholder="Digite a atividade:">
+              </div>
+            </div>
+          </div>
+        </div>
+
+                  <!-- Professor H -->
+        <div class="card">
+            <div class="cabecalho">
+            <h2>Dene</h2>
+            <input type="checkbox" class="card-checkbox" id="check-6ano" /></div>
+            <h3>Ingles</h3>
+          
+            <!-- Início do bloco por ano -->
+            <div class="ano-bloco">
+              <h4>6º ano</h4>
+          
+              <div class="dia">
+                <h5>Terça-Feira</h5>
+                <div class="box">
+                  <div class="titulo">Conteúdo</div>
+                  <input id="campo-BK" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                  <div class="titulo">Atividade para casa</div>
+                  <input id="campo-BL" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                </div>
+              </div>
+            </div>
+          
+            <!-- Outro bloco de ano -->
+            <div class="ano-bloco">
+              <h4>7º ano TARDE</h4>
+          
+              <div class="dia">
+                <h5>Segunda-Feira</h5>
+                <div class="box">
+                  <div class="titulo">Conteúdo</div>
+                  <input id="campo-BM" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                  <div class="titulo">Atividade para casa</div>
+                  <input id="campo-BN" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                </div>
+              </div>
+            </div>
+
+            <div class="ano-bloco">
+              <h4>8º ano TARDE</h4>
+          
+              <div class="dia">
+                <h5>Segunda-Feira</h5>
+                <div class="box">
+                  <div class="titulo">Conteúdo</div>
+                  <input id="campo-BO" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                  <div class="titulo">Atividade para casa</div>
+                  <input id="campo-BP" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                </div>
+              </div>
+
+              <div class="dia">
+                <h5>Terça-Feira</h5>
+                <div class="box">
+                  <div class="titulo">Conteúdo</div>
+                  <input id="campo-BQ" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                  <div class="titulo">Atividade para casa</div>
+                  <input id="campo-BR" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                </div>
+              </div>
+            </div>
+
+            <div class="ano-bloco">
+              <h4>9º ano TARDE</h4>
+          
+              <div class="dia">
+                <h5>Terça-Feira</h5>
+                <div class="box">
+                  <div class="titulo">Conteúdo</div>
+                  <input id="campo-BS" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                  <div class="titulo">Atividade para casa</div>
+                  <input id="campo-BT" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                </div>
+              </div>
+            </div>
+          </div>
+
+                  <!-- Professor I -->
+                  <div class="card">
+                    <div class="cabecalho">
+                    <h2>Eliomar</h2>
+                    <input type="checkbox" class="card-checkbox" id="check-6ano" /></div>
+                    <h3>Gramática</h3>
+                  
+                    <!-- Início do bloco por ano -->
+                    <div class="ano-bloco">
+                      <h4>6º ano TARDE</h4>
+                  
+                      <div class="dia">
+                        <h5>Segunda-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-BU" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-BV" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                  
+                      <div class="dia">
+                        <h5>Quarta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-BW" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-BX" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <!-- Outro bloco de ano -->
+                    <div class="ano-bloco">
+                      <h4>7º ano TARDE</h4>
+                  
+                      <div class="dia">
+                        <h5>Segunda-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-BY" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-BZ" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                  
+                      <div class="dia">
+                        <h5>Quarta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-CA" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-CB" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+                    <h3>Redação</h3>
+                    <div class="ano-bloco">
+                      <h4>6º ano TARDE</h4>
+                  
+                      <div class="dia">
+                        <h5>Segunda-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-CC" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-CD" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="ano-bloco">
+                      <h4>8º ano TARDE</h4>
+                  
+                      <div class="dia">
+                        <h5>Quarta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-CE" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-CF" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                      <div class="dia">
+                        <h5>Quinta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-CG" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-CH" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="ano-bloco">
+                      <h4>9º ano TARDE</h4>
+                  
+                      <div class="dia">
+                        <h5>Segunda-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-CI" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-CJ" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                      <div class="dia">
+                        <h5>Quarta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-CK" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-CL" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Professor J -->
+                  <div class="card">
+                    <div class="cabecalho">
+                    <h2>Emanuel</h2>
+                    <input type="checkbox" class="card-checkbox" id="check-6ano" /></div>
+                    <h3>Matemática</h3>
+                  
+                    <!-- Início do bloco por ano -->
+                    <div class="ano-bloco">
+                      <h4>6º ano</h4>
+                  
+                      <div class="dia">
+                        <h5>Segunda-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-CM" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-CN" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                  
+                      <div class="dia">
+                        <h5>Quinta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-CO" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-CP" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <!-- Outro bloco de ano -->
+                    <div class="ano-bloco">
+                      <h4>7º ano</h4>
+                  
+                      <div class="dia">
+                        <h5>Segunda-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-CQ" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-CR" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                  
+                      <div class="dia">
+                        <h5>Quinta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-CS" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-CT" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Professor K -->
+                  <div class="card">
+                    <div class="cabecalho">
+                    <h2>Fernanda</h2>
+                    <input type="checkbox" class="card-checkbox" id="check-6ano" /></div>
+                    <h3>Geografia</h3>
+                  
+                    <!-- Início do bloco por ano -->
+                    <div class="ano-bloco">
+                      <h4>6º ano</h4>
+                  
+                      <div class="dia">
+                        <h5>Quarta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-CU" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-CV" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                  
+                      <div class="dia">
+                        <h5>Sexta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-CW" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-CX" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <!-- Outro bloco de ano -->
+                    <div class="ano-bloco">
+                      <h4>7º ano</h4>
+                  
+                      <div class="dia">
+                        <h5>Quarta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-CY" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-CZ" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                  
+                      <div class="dia">
+                        <h5>Quinta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-DA" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-DB" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+
+                      <div class="dia">
+                        <h5>Sexta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-DC" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-DD" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="ano-bloco">
+                      <h4>8º ano</h4>
+
+                      <div class="dia">
+                        <h5>Quinta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-DE" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-DF" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+
+                      <div class="dia">
+                        <h5>Sexta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-DG" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-DH" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="ano-bloco">
+                      <h4>9º ano</h4>
+
+                      <div class="dia">
+                        <h5>Quinta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-DI" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-DJ" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+
+                      <div class="dia">
+                        <h5>Sexta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-DK" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-DL" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Professor L -->
+                  <div class="card">
+                    <div class="cabecalho">
+                    <h2>Fernanda Tarde</h2>
+                    <input type="checkbox" class="card-checkbox" id="check-6ano" /></div>
+                    <h3>Geografia</h3>
+                  
+                    <!-- Início do bloco por ano -->
+                    <div class="ano-bloco">
+                      <h4>6º ano TARDE</h4>
+                  
+                      <div class="dia">
+                        <h5>Terça-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-DM" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-DN" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                  
+                      <div class="dia">
+                        <h5>Quarta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-DO" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-DP" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <!-- Outro bloco de ano -->
+                    <div class="ano-bloco">
+                      <h4>7º ano TARDE</h4>
+                  
+                      <div class="dia">
+                        <h5>Terça-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-DQ" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-DR" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                  
+                      <div class="dia">
+                        <h5>Quarta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-DS" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-DT" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="ano-bloco">
+                      <h4>8º ano TARDE</h4>
+                  
+                      <div class="dia">
+                        <h5>segunda-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-DU" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-DV" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+
+                      <div class="dia">
+                        <h5>Terça-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-DW" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-DX" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                  
+                      <div class="dia">
+                        <h5>Quarta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-DY" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-DZ" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="ano-bloco">
+                      <h4>9º ano TARDE</h4>
+                  
+                      <div class="dia">
+                        <h5>segunda-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-EA" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-EB" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                  
+                      <div class="dia">
+                        <h5>Quarta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-EE" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-EF" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+        <!-- Professor M -->
+        <div class="card">
+          <div class="cabecalho">
+          <h2>Francysnalda</h2>
+          <input type="checkbox" class="card-checkbox" id="check-6ano" /></div>
+          <h3>Filosofia</h3>
+        
+          <!-- Início do bloco por ano -->
+          <div class="ano-bloco">
+            <h4>6º ano</h4>
+        
+            <div class="dia">
+              <h5>Quarta-Feira</h5>
+              <div class="box">
+                <div class="titulo">Conteúdo</div>
+                <input id="campo-EG" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                <div class="titulo">Atividade para casa</div>
+                <input id="campo-EH" class="card-textarea" type="text" placeholder="Digite a atividade:">
+              </div>
+            </div>
+          </div>
+        
+          <!-- Outro bloco de ano -->
+          <div class="ano-bloco">
+            <h4>7º ano</h4>
+        
+            <div class="dia">
+              <h5>Quarta-Feira</h5>
+              <div class="box">
+                <div class="titulo">Conteúdo</div>
+                <input id="campo-EI" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                <div class="titulo">Atividade para casa</div>
+                <input id="campo-EJ" class="card-textarea" type="text" placeholder="Digite a atividade:">
+              </div>
+            </div>
+          </div>
+
+          <div class="ano-bloco">
+            <h4>8º ano</h4>
+        
+            <div class="dia">
+              <h5>Quarta-Feira</h5>
+              <div class="box">
+                <div class="titulo">Conteúdo</div>
+                <input id="campo-EK" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                <div class="titulo">Atividade para casa</div>
+                <input id="campo-EL" class="card-textarea" type="text" placeholder="Digite a atividade:">
+              </div>
+            </div>
+          </div>
+
+          <div class="ano-bloco">
+            <h4>9º ano</h4>
+        
+            <div class="dia">
+              <h5>Quarta-Feira</h5>
+              <div class="box">
+                <div class="titulo">Conteúdo</div>
+                <input id="campo-EM" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                <div class="titulo">Atividade para casa</div>
+                <input id="campo-EN" class="card-textarea" type="text" placeholder="Digite a atividade:">
+              </div>
+            </div>
+          </div>
+        </div>
+
+                          <!-- Professor N -->
+                          <div class="card">
+                            <div class="cabecalho">
+                            <h2>Gilson</h2>
+                            <input type="checkbox" class="card-checkbox" id="check-6ano" /></div>
+                            <h3>Matemática</h3>
+                          
+                            <!-- Outro bloco de ano -->
+                            <div class="ano-bloco">
+                              <h4>7º ano TARDE</h4>
+                          
+                              <div class="dia">
+                                <h5>Terça-Feira</h5>
+                                <div class="box">
+                                  <div class="titulo">Conteúdo</div>
+                                  <input id="campo-EO" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                                  <div class="titulo">Atividade para casa</div>
+                                  <input id="campo-EP" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                                </div>
+                              </div>
+                          
+                              <div class="dia">
+                                <h5>Quinta-Feira</h5>
+                                <div class="box">
+                                  <div class="titulo">Conteúdo</div>
+                                  <input id="campo-EQ" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                                  <div class="titulo">Atividade para casa</div>
+                                  <input id="campo-ER" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                                </div>
+                              </div>
+
+                              <div class="dia">
+                                <h5>Sexta-Feira</h5>
+                                <div class="box">
+                                  <div class="titulo">Conteúdo</div>
+                                  <input id="campo-ES" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                                  <div class="titulo">Atividade para casa</div>
+                                  <input id="campo-ET" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="ano-bloco">
+                              <h4>8º ano TARDE</h4>
+                          
+                              <div class="dia">
+                                <h5>Terça-Feira</h5>
+                                <div class="box">
+                                  <div class="titulo">Conteúdo</div>
+                                  <input id="campo-EU" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                                  <div class="titulo">Atividade para casa</div>
+                                  <input id="campo-EV" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                                </div>
+                              </div>
+                          
+                              <div class="dia">
+                                <h5>Quinta-Feira</h5>
+                                <div class="box">
+                                  <div class="titulo">Conteúdo</div>
+                                  <input id="campo-EW" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                                  <div class="titulo">Atividade para casa</div>
+                                  <input id="campo-EX" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                                </div>
+                              </div>
+
+                              <div class="dia">
+                                <h5>Sexta-Feira</h5>
+                                <div class="box">
+                                  <div class="titulo">Conteúdo</div>
+                                  <input id="campo-EY" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                                  <div class="titulo">Atividade para casa</div>
+                                  <input id="campo-EZ" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="ano-bloco">
+                              <h4>9º ano TARDE</h4>
+                          
+                              <div class="dia">
+                                <h5>Terça-Feira</h5>
+                                <div class="box">
+                                  <div class="titulo">Conteúdo</div>
+                                  <input id="campo-FA" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                                  <div class="titulo">Atividade para casa</div>
+                                  <input id="campo-FB" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                                </div>
+                              </div>
+                          
+                              <div class="dia">
+                                <h5>Quarta-Feira</h5>
+                                <div class="box">
+                                  <div class="titulo">Conteúdo</div>
+                                  <input id="campo-FC" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                                  <div class="titulo">Atividade para casa</div>
+                                  <input id="campo-FD" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                                </div>
+                              </div>
+
+                              <div class="dia">
+                                <h5>Sexta-Feira</h5>
+                                <div class="box">
+                                  <div class="titulo">Conteúdo</div>
+                                  <input id="campo-FE" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                                  <div class="titulo">Atividade para casa</div>
+                                  <input id="campo-FF" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                  <!-- Professor O -->
+                  <div class="card">
+                    <div class="cabecalho">
+                    <h2>Herbert</h2>
+                    <input type="checkbox" class="card-checkbox" id="check-6ano" /></div>
+                    <h3>Artes</h3>
+                  
+                    <!-- Início do bloco por ano -->
+                    <div class="ano-bloco">
+                      <h4>6º ano</h4>
+                  
+                      <div class="dia">
+                        <h5>Terça/Sexta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-FG" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-FH" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <!-- Outro bloco de ano -->
+                    <div class="ano-bloco">
+                      <h4>7º ano</h4>
+                  
+                      <div class="dia">
+                        <h5>Terça/Sexta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-FI" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-FJ" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Professor P -->
+                  <div class="card">
+                    <div class="cabecalho">
+                    <h2>Iran</h2>
+                    <input type="checkbox" class="card-checkbox" id="check-6ano" /></div>
+                    <h3>História</h3>
+                  
+                    <!-- Início do bloco por ano -->
+                    <div class="ano-bloco">
+                      <h4>8º ano TARDE</h4>
+                  
+                      <div class="dia">
+                        <h5>Quinta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-FK" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-FL" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                  
+                      <div class="dia">
+                        <h5>Sexta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-FM" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-FN" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <!-- Outro bloco de ano -->
+                    <div class="ano-bloco">
+                      <h4>9º ano TARDE</h4>
+                  
+                      <div class="dia">
+                        <h5>Quinta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-FO" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-FP" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                  
+                      <div class="dia">
+                        <h5>Sexta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-FQ" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-FR" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Professor Q -->
+                  <div class="card">
+                    <div class="cabecalho">
+                    <h2>Joana</h2>
+                    <input type="checkbox" class="card-checkbox" id="check-6ano" /></div>
+                    <h3>Biologia</h3>
+                  
+                    <!-- Início do bloco por ano -->
+                    <div class="ano-bloco">
+                      <h4>8º ano</h4>
+                  
+                      <div class="dia">
+                        <h5>Quarta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-FS" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-FT" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                  
+                      <div class="dia">
+                        <h5>Sexta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-FU" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-FV" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <!-- Outro bloco de ano -->
+                    <div class="ano-bloco">
+                      <h4>9º ano</h4>
+                  
+                      <div class="dia">
+                        <h5>Quarta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-FW" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-FX" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                  
+                      <div class="dia">
+                        <h5>Sexta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-FY" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-FZ" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                            <!-- Professor R -->
+        <div class="card">
+          <div class="cabecalho">
+          <h2>Larissa</h2>
+          <input type="checkbox" class="card-checkbox" id="check-6ano" /></div>
+          <h3>Leitura</h3>
+        
+          <!-- Início do bloco por ano -->
+          <div class="ano-bloco">
+            <h4>6º ano</h4>
+        
+            <div class="dia">
+              <h5>Sexta-Feira</h5>
+              <div class="box">
+                <div class="titulo">Conteúdo</div>
+                <input id="campo-GA" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                <div class="titulo">Atividade para casa</div>
+                <input id="campo-GB" class="card-textarea" type="text" placeholder="Digite a atividade:">
+              </div>
+            </div>
+          </div>
+        
+          <h3>Gramática</h3>
+          <div class="ano-bloco">
+            <h4>6º ano</h4>
+        
+            <div class="dia">
+              <h5>Segunda-Feira</h5>
+              <div class="box">
+                <div class="titulo">Conteúdo</div>
+                <input id="campo-GC" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                <div class="titulo">Atividade para casa</div>
+                <input id="campo-GD" class="card-textarea" type="text" placeholder="Digite a atividade:">
+              </div>
+            </div>
+          </div>
+
+          <div class="ano-bloco">
+            <h4>7º ano</h4>
+        
+            <div class="dia">
+              <h5>Segunda-Feira</h5>
+              <div class="box">
+                <div class="titulo">Conteúdo</div>
+                <input id="campo-GE" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                <div class="titulo">Atividade para casa</div>
+                <input id="campo-GF" class="card-textarea" type="text" placeholder="Digite a atividade:">
+              </div>
+            </div>
+          </div>
+        </div>
+
+                  <!-- Professor S -->
+                  <div class="card">
+                    <div class="cabecalho">
+                    <h2>Leandro</h2>
+                    <input type="checkbox" class="card-checkbox" id="check-6ano" /></div>
+                    <h3>Redação</h3>
+                  
+                    <!-- Início do bloco por ano -->
+                    <div class="ano-bloco">
+                      <h4>6º ano</h4>
+                  
+                      <div class="dia">
+                        <h5>Quinta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-GG" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-GH" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <!-- Outro bloco de ano -->
+                    <div class="ano-bloco">
+                      <h4>7º ano</h4>
+                  
+                      <div class="dia">
+                        <h5>Quinta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-GI" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-GJ" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="ano-bloco">
+                      <h4>8º ano</h4>
+                  
+                      <div class="dia">
+                        <h5>Terça-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-GK" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-GL" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                  
+                      <div class="dia">
+                        <h5>Quinta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-GM" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-GN" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="ano-bloco">
+                      <h4>9º ano</h4>
+                  
+                      <div class="dia">
+                        <h5>Terça-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-GO" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-GP" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                  
+                      <div class="dia">
+                        <h5>Sexta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-GQ" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-GR" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Professor T -->
+                  <div class="card">
+                    <div class="cabecalho">
+                    <h2>Leonardo Coelho</h2>
+                    <input type="checkbox" class="card-checkbox" id="check-6ano" /></div>
+                    <h3>História</h3>
+                  
+                    <!-- Início do bloco por ano -->
+                    <div class="ano-bloco">
+                      <h4>6º ano</h4>
+                  
+                      <div class="dia">
+                        <h5>Quarta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-GS" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-GT" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                  
+                      <div class="dia">
+                        <h5>Quinta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-GU" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-GV" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <!-- Outro bloco de ano -->
+                    <div class="ano-bloco">
+                      <h4>7º ano</h4>
+                  
+                      <div class="dia">
+                        <h5>Terça-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-GW" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-GX" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                  
+                      <div class="dia">
+                        <h5>Quarta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-GY" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-GZ" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="ano-bloco">
+                      <h4>8º ano</h4>
+                  
+                      <div class="dia">
+                        <h5>Terça-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-HA" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-HB" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                  
+                      <div class="dia">
+                        <h5>Quinta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-HC" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-HD" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="ano-bloco">
+                      <h4>9º ano</h4>
+                  
+                      <div class="dia">
+                        <h5>Terça-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-HE" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-HF" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                  
+                      <div class="dia">
+                        <h5>Quarta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-HG" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-HH" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Professor U -->
+                  <div class="card">
+                    <div class="cabecalho">
+                    <h2>Leonardo Fernandes</h2>
+                    <input type="checkbox" class="card-checkbox" id="check-6ano" /></div>
+                    <h3>Matemática</h3>
+                  
+                    <!-- Início do bloco por ano -->
+                    <div class="ano-bloco">
+                      <h4>6º ano TARDE</h4>
+                  
+                      <div class="dia">
+                        <h5>Segunda-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-HI" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-HJ" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                  
+                      <div class="dia">
+                        <h5>Terça-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-HK" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-HL" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+
+                      <div class="dia">
+                        <h5>Quarta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-HM" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-HN" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <h3>Geometria</h3>
+                    <div class="ano-bloco">
+                      <h4>6º ano TARDE</h4>
+                  
+                      <div class="dia">
+                        <h5>Terça-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-HO" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-HP" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="ano-bloco">
+                      <h4>7º ano TARDE</h4>
+                  
+                      <div class="dia">
+                        <h5>Segunda-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-HQ" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-HR" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="ano-bloco">
+                      <h4>8º ano TARDE</h4>
+                  
+                      <div class="dia">
+                        <h5>Segunda-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-HS" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-HT" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="ano-bloco">
+                      <h4>9º ano TARDE</h4>
+                  
+                      <div class="dia">
+                        <h5>Terça-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-HU" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-HV" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Professor V -->
+                  <div class="card">
+                    <div class="cabecalho">
+                    <h2>Vanessa</h2>
+                    <input type="checkbox" class="card-checkbox" id="check-6ano" /></div>
+                    <h3>Ingles</h3>
+                  
+                    <!-- Início do bloco por ano -->
+                    <div class="ano-bloco">
+                      <h4>6º ano TARDE</h4>
+                  
+                      <div class="dia">
+                        <h5>Quinta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-HW" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-HX" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <!-- Outro bloco de ano -->
+                    <div class="ano-bloco">
+                      <h4>7º ano</h4>
+                  
+                      <div class="dia">
+                        <h5>Terça-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-HY" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-HZ" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                  
+                      <div class="dia">
+                        <h5>Quarta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-IA" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-IB" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="ano-bloco">
+                      <h4>8º ano</h4>
+                  
+                      <div class="dia">
+                        <h5>Terça-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-IC" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-ID" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="ano-bloco">
+                      <h4>9º ano</h4>
+                  
+                      <div class="dia">
+                        <h5>Terça-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-IE" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-IF" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Professor W -->
+                  <div class="card">
+                    <div class="cabecalho">
+                    <h2>Vinicius</h2>
+                    <input type="checkbox" class="card-checkbox" id="check-6ano" /></div>
+                    <h3>Matemática</h3>
+                  
+                    <!-- Início do bloco por ano -->
+                    <div class="ano-bloco">
+                      <h4>8º ano</h4>
+                  
+                      <div class="dia">
+                        <h5>Segunda-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-IG" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-IH" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                  
+                      <div class="dia">
+                        <h5>Quarta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-II" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-IJ" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <!-- Outro bloco de ano -->
+                    <div class="ano-bloco">
+                      <h4>9º ano</h4>
+                  
+                      <div class="dia">
+                        <h5>Segunda-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-IK" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-IL" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                  
+                      <div class="dia">
+                        <h5>Quarta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-IM" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-IN" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Professor X -->
+                  <div class="card">
+                    <div class="cabecalho">
+                    <h2>Wanderson</h2>
+                    <input type="checkbox" class="card-checkbox" id="check-6ano" /></div>
+                    <h3>Física</h3>
+                  
+                    <!-- Início do bloco por ano -->
+                    <div class="ano-bloco">
+                      <h4>9º ano</h4>
+                  
+                      <div class="dia">
+                        <h5>Quinta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-IO" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-IP" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Professor Y -->
+                  <div class="card">
+                    <div class="cabecalho">
+                    <h2>Yasmin</h2>
+                    <input type="checkbox" class="card-checkbox" id="check-6ano" /></div>
+                    <h3>Gramática</h3>
+                  
+                    <!-- Início do bloco por ano -->
+                    <div class="ano-bloco">
+                      <h4>8º ano</h4>
+                  
+                      <div class="dia">
+                        <h5>Segunda-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-IQ" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-IR" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+                  
+                    <!-- Outro bloco de ano -->
+                    <div class="ano-bloco">
+                      <h4>9º ano</h4>
+                  
+                      <div class="dia">
+                        <h5>Segunda-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-IS" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                          <div class="titulo">Atividade para casa</div>
+                          <input id="campo-IT" class="card-textarea" type="text" placeholder="Digite a atividade:">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Roda de Leitura -->
+                  <div class="card">
+                    <div class="cabecalho">
+                    <h2>Roda de Leitura</h2>
+                    <input type="checkbox" class="card-checkbox" id="check-6ano" /></div>
+                    <h3>Da agendas do 6°</h3>
+                  
+                    <!-- Início do bloco por ano -->
+                    <div class="ano-bloco">
+                      <h4>6°</h4>
+                  
+                      <div class="dia">
+                        <h5>Segunda-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-RL1" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                        </div>
+                      </div>
+
+                      <div class="dia">
+                        <h5>Terça-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-RL2" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                        </div>
+                      </div>
+
+                      <div class="dia">
+                        <h5>Quarta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-RL3" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                        </div>
+                      </div>
+
+                      <div class="dia">
+                        <h5>Quinta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-RL4" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                        </div>
+                      </div>
+
+                      <div class="dia">
+                        <h5>Sexta-Feira</h5>
+                        <div class="box">
+                          <div class="titulo">Conteúdo</div>
+                          <input id="campo-RL5" class="card-textarea" type="text" placeholder="Digite o conteúdo:">
+                        </div>
+                      </div>
+                    </div>
+                
+                  </div>
+
+      </section>
+
+      <script src="script.js"></script>
+      <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+      <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+      <script>
+        const grid = document.querySelector('.card-grid');
+        let msnry;
+
+        // Função para inicializar ou atualizar o Masonry
+        function initMasonry() {
+            if (msnry) {
+            msnry.destroy(); // destrói o layout anterior
+            }
+
+            msnry = new Masonry(grid, {
+            itemSelector: '.card',
+            percentPosition: true,
+            gutter: 16,
+            fitWidth: true
+            });
+        }
+
+        // Aguarda o carregamento completo
+        imagesLoaded(grid, () => {
+            initMasonry();
+
+            // Atualiza no resize com debounce
+            let resizeTimeout;
+            window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                initMasonry();
+            }, 300);
+            });
+        });
+      </script>
+
+<script>
+
+</script>
+</body>
+</html>
