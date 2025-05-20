@@ -315,6 +315,16 @@ document.addEventListener('DOMContentLoaded', () => {
       campoIH: document.getElementById("campo-IH").value,
       campoII: document.getElementById("campo-II").value,
       campoIJ: document.getElementById("campo-IJ").value,
+      campoIJ: document.getElementById("campo-IK").value,
+      campoIJ: document.getElementById("campo-IL").value,
+      campoIJ: document.getElementById("campo-IM").value,
+      campoIJ: document.getElementById("campo-IN").value,
+      campoIJ: document.getElementById("campo-IO").value,
+      campoIJ: document.getElementById("campo-IP").value,
+      campoIJ: document.getElementById("campo-IQ").value,
+      campoIJ: document.getElementById("campo-IR").value,
+      campoIJ: document.getElementById("campo-IS").value,
+      campoIJ: document.getElementById("campo-IT").value,
       campoRL1: document.getElementById("campo-RL1").value,
       campoRL2: document.getElementById("campo-RL2").value,
       campoRL3: document.getElementById("campo-RL3").value,
@@ -390,22 +400,14 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
 
-    function formatarDataBR(dataISO) {
-      if (!dataISO) return "Não Possui";
-      const [ano, mes, dia] = dataISO.split("-");
-      return `${dia}/${mes}/${ano}`;
-    }
-    
-    campos.campoData1 = formatarDataBR(campos.campoData1);
-    campos.campoData2 = formatarDataBR(campos.campoData2);
+function formatarDataBR(dataISO) {
+  if (!dataISO) return "Não Possui";
+  const [ano, mes, dia] = dataISO.split("-");
+  return `${dia}/${mes}/${ano}`;
+}
 
-    ["campoData1", "campoData2"].forEach((key) => {
-      const data = campos[key];
-      if (data) {
-        const [ano, mes, dia] = data.split("-");
-        campos[key] = `${dia}/${mes}/${ano}`;
-      }
-    });
+campos.campoData1 = formatarDataBR(campos.campoData1);
+campos.campoData2 = formatarDataBR(campos.campoData2);
   
     const zip = new JSZip(); // Cria o zip final
   
