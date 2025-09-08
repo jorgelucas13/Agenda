@@ -86,6 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
       campoT: document.getElementById("campo-T").value,
       campoT1: document.getElementById("campo-T1").value,
       campoT2: document.getElementById("campo-T2").value,
+      campoT20: document.getElementById("campo-T20").value,
+      campoU0: document.getElementById("campo-U0").value,
       campoU: document.getElementById("campo-U").value,
       campoV: document.getElementById("campo-V").value,
       campoX: document.getElementById("campo-X").value,
@@ -133,8 +135,8 @@ document.addEventListener('DOMContentLoaded', () => {
       campoBL: document.getElementById("campo-BL").value,
       campoBM: document.getElementById("campo-BM").value,
       campoBN: document.getElementById("campo-BN").value,
-      campoBO: document.getElementById("campo-BO").value,
-      campoBP: document.getElementById("campo-BP").value,
+      campoBM1: document.getElementById("campo-BM1").value,
+      campoBN1: document.getElementById("campo-BN1").value,
       campoBQ: document.getElementById("campo-BQ").value,
       campoBR: document.getElementById("campo-BR").value,
       campoBS: document.getElementById("campo-BS").value,
@@ -196,8 +198,6 @@ document.addEventListener('DOMContentLoaded', () => {
       campoDV: document.getElementById("campo-DV").value,
       campoDW: document.getElementById("campo-DW").value,
       campoDX: document.getElementById("campo-DX").value,
-      campoDY: document.getElementById("campo-DY").value,
-      campoDZ: document.getElementById("campo-DZ").value,
     
       campoEA: document.getElementById("campo-EA").value,
       campoEB: document.getElementById("campo-EB").value,
@@ -217,8 +217,6 @@ document.addEventListener('DOMContentLoaded', () => {
       campoER: document.getElementById("campo-ER").value,
       campoES: document.getElementById("campo-ES").value,
       campoET: document.getElementById("campo-ET").value,
-      campoEU: document.getElementById("campo-EU").value,
-      campoEV: document.getElementById("campo-EV").value,
       campoEW: document.getElementById("campo-EW").value,
       campoEX: document.getElementById("campo-EX").value,
       campoEY: document.getElementById("campo-EY").value,
@@ -319,6 +317,8 @@ document.addEventListener('DOMContentLoaded', () => {
       campoIL: document.getElementById("campo-IL").value,
       campoIM: document.getElementById("campo-IM").value,
       campoIN: document.getElementById("campo-IN").value,
+      campoIO1: document.getElementById("campo-IO1").value,
+      campoIP1: document.getElementById("campo-IP1").value,
       campoIO: document.getElementById("campo-IO").value,
       campoIP: document.getElementById("campo-IP").value,
       campoIQ: document.getElementById("campo-IQ").value,
@@ -348,7 +348,7 @@ document.addEventListener('DOMContentLoaded', () => {
         nome: "7-ANO-M.docx",
         camposUsados: ["campoC", "campoD", "campoY", "campoZ",
           "campoAM", "campoAN", "campoAO", "campoAP", "campoCQ", "campoCR", "campoCS", "campoCT", "campoCY", "campoCZ", "campoDA", "campoDB", "campoDC", "campoDD", "campoEI", "campoEJ"
-          , "campoFI", "campoFJ", "campoGE", "campoGF", "campoGI", "campoGJ", "campoGW", "campoGX", "campoGY", "campoGZ", "campoIA", "campoIB", "campoData1", "campoData2"
+          , "campoFI", "campoFJ", "campoGE", "campoGF", "campoGI", "campoGJ", "campoGW", "campoGX", "campoGY", "campoGZ", "campoIA", "campoIB", "campoHY", "campoHZ",  "campoData1", "campoData2"
         ],
       },
       {
@@ -376,7 +376,7 @@ document.addEventListener('DOMContentLoaded', () => {
       {
         nome: "7-ANO-T.docx",
         camposUsados: [, "campoC", "campoD", "campoM", "campoN", "campoP", "campoQ",
-           "campoT", "campoT1",  "campoT2", "campoU", "campoBC", "campoBD", "campoBE", "campoBF", "campoBG", "campoBH", "campoBM", "campoBN", "campoBY", "campoBZ", "campoCA", "campoCB"
+           "campoT", "campoT1",  "campoT2", "campoU",  "campoT20", "campoU0", "campoBC", "campoBD", "campoBE", "campoBF", "campoBG", "campoBH", "campoBM", "campoBN", "campoBM1", "campoBN1", "campoBY", "campoBZ", "campoCA", "campoCB"
            , "campoDQ", "campoDR", "campoDS", "campoDT", "campoEI", "campoEJ", "campoEO", "campoEP", "campoEQ", "campoER", "campoES", "campoET", "campoFI", "campoFJ", "campoHQ", "campoHR", "campoHY", "campoHZ"
            , "campoData1", "campoData2"
         ],
@@ -384,8 +384,8 @@ document.addEventListener('DOMContentLoaded', () => {
       {
         nome: "8-ANO-T.docx",
         camposUsados: ["campoE", "campoF", "campoG", "campoH",
-          "campoAE", "campoAF", "campoAQ", "campoAR", "campoAS", "campoAT", "campoBO", "campoBP", "campoBQ", "campoBR", "campoCE", "campoCF", "campoCG", "campoCH"
-          , "campoDU", "campoDV", "campoDW", "campoDX", "campoDY", "campoDZ", "campoEK", "campoEL", "campoEU", "campoEV", "campoEW", "campoEX", "campoEY", "campoEZ", "campoFK", "campoFL"
+          "campoAE", "campoAF", "campoAQ", "campoAR", "campoAS", "campoAT", "campoBQ", "campoBR", "campoCE", "campoCF", "campoCG", "campoCH"
+          , "campoDU", "campoDV", "campoDW", "campoDX", "campoEK", "campoEL", "campoEW", "campoEX", "campoEY", "campoEZ", "campoFK", "campoFL"
           , "campoFM", "campoFN", "campoHS", "campoHT", "campoData1", "campoData2"
         ],
       },
@@ -394,7 +394,7 @@ document.addEventListener('DOMContentLoaded', () => {
         camposUsados: ["campoI", "campoJ", "campoK", "campoL",
         "campoAG", "campoAH", "campoAU", "campoAV", "campoBI", "campoBJ", "campoBS", "campoBT", "campoCI", "campoCJ", "campoCK", "campoCL", "campoEA", "campoEB",
         "campoEE", "campoEF", "campoEM", "campoEN", "campoFA", "campoFB", "campoFC", "campoFD", "campoFE", "campoFF", "campoFO", "campoFP", "campoFQ", "campoFR", "campoHU", "campoHV"
-        , "campoIO", "campoIP", "campoData1", "campoData2"]
+        , "campoIO", "campoIP","campoIO1", "campoIP1", "campoData1", "campoData2"]
       },
       // Adicione mais aqui conforme necessário
     ];
@@ -446,5 +446,40 @@ campos.campoData2 = formatarDataBR(campos.campoData2);
       });
     });
   });
+
+
+  
+  const checkboxes = document.querySelectorAll('.card-checkbox');
+const listaNomes = document.getElementById('lista-nomes');
+
+// Função para atualizar a lista
+function atualizarLista() {
+  listaNomes.innerHTML = ''; // Limpa a lista
+  checkboxes.forEach(checkbox => {
+    const nome = checkbox.dataset.nome;
+    if (!checkbox.checked) {
+      const li = document.createElement('li');
+      li.textContent = nome;
+      listaNomes.appendChild(li);
+    }
+  });
+}
+
+// Carrega estado do localStorage
+checkboxes.forEach(c => {
+  const id = c.id;
+  const salvo = localStorage.getItem(id);
+  if (salvo !== null) {
+    c.checked = salvo === 'true';
+  }
+  c.addEventListener('change', () => {
+    localStorage.setItem(id, c.checked);
+    atualizarLista();
+  });
+});
+
+// Inicializa lista ao carregar página
+atualizarLista();
+
 
 
